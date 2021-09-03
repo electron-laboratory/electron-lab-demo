@@ -1,0 +1,17 @@
+{
+  "main": ".webpack/main/index.js",
+  "version": "1.0.0",
+  "name": "test",
+  "scripts": {
+    "start": "el start",
+    "build": "el build"
+  },
+  "devDependencies": {
+    "electron-lab": "0.1.1-alpha.0"
+  },
+  "dependencies": {
+    "@electron-lab/title-bar": "*",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
