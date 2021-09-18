@@ -2,7 +2,6 @@ import { BrowserWindow, app } from 'electron';
 import { initWindowListener } from '@electron-lab/title-bar/lib/main';
 import { getEntry } from 'electron-lab';
 
-declare const WEBPACK_ENTRY: string;
 const createWindow = (): void => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
