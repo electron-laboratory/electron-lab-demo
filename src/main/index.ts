@@ -1,5 +1,6 @@
 import { BrowserWindow, app } from 'electron';
 import { initWindowListener } from '@electron-lab/title-bar/lib/main';
+import { getEntry } from 'electron-lab';
 
 declare const WEBPACK_ENTRY: string;
 const createWindow = (): void => {
@@ -19,7 +20,7 @@ const createWindow = (): void => {
     frame: false,
   });
   // and load the index.html of the app.
-  mainWindow.loadURL(WEBPACK_ENTRY);
+  mainWindow.loadURL(getEntry());
   mainWindow.webContents.openDevTools();
   initWindowListener(mainWindow);
 };
