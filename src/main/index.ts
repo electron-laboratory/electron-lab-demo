@@ -1,26 +1,21 @@
 import { BrowserWindow, app } from 'electron';
 import { initWindowListener } from '@electron-lab/title-bar/lib/main';
-import { getEntry } from 'electron-lab';
+import { join } from 'path';
 
 const createWindow = (): void => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1440,
-    height: 900,
-    minWidth: 1280,
-    minHeight: 720,
     webPreferences: {
       webSecurity: false,
       webviewTag: true,
       nodeIntegration: true, // 集合node进程
       contextIsolation: false,
     },
-    closable: true,
     frame: false,
+    titleBarStyle: 'hiddenInset',
   });
   // and load the index.html of the app.
-  mainWindow.loadURL(getEntry());
-  mainWindow.webContents.openDevTools();
+  mainWindow.loadURL(require(join(__dirname, '../entry.js')).index);
   initWindowListener(mainWindow);
 };
 app.on('ready', createWindow);

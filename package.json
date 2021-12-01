@@ -1,5 +1,5 @@
 {
-  "main": ".webpack/main/index.js",
+  "main": ".el/main/index.js",
   "version": "1.0.0",
   "name": "test",
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "el build"
   },
   "devDependencies": {
-    "electron-lab": "*"
+    "electron-lab": "beta"
   },
   "dependencies": {
     "@electron-lab/title-bar": "*",

@@ -5,8 +5,8 @@ import './index.less';
 
 const App = () => {
   return (
-    <div style={{ color: 'white' }}>
-      <TitleBar title="Electron Lab"></TitleBar>
+    <div>
+      <TitleBar>Electron Lab</TitleBar>
       Hello Electron!
     </div>
   );
